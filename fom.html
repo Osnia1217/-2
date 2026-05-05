@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旅程簡介 - 吃喝玩樂營</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 讓表單看起來更整齊的小樣式 */
+        form { max-width: 600px; margin: 20px auto; padding: 20px; font-family: sans-serif; }
+        fieldset { border: 1px solid #ccc; border-radius: 8px; margin-bottom: 20px; padding: 15px; }
+        legend { font-weight: bold; padding: 0 10px; color: #333; }
+        .form-group { margin-bottom: 12px; }
+        label { margin-right: 10px; }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="password"], input[type="date"], select, textarea {
+            padding: 5px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;
+        }
+        .btn-group { text-align: center; }
+        input[type="submit"], input[type="reset"] {
+            padding: 8px 20px; cursor: pointer; border-radius: 5px; border: none; margin: 0 5px;
+        }
+        input[type="submit"] { background-color: #4CAF50; color: white; }
+        input[type="reset"] { background-color: #f44336; color: white; }
+    </style>
+</head>
+<body>
+    
+    <script src ="nav_bar.js" ></script>
+    <div id="nav_bar"></div>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>個人資料登記</legend>
+            <div class="form-group">
+                <label for="txtName">姓名：</label><input type="text" name="txtName" id="txtName" required>
+            </div>
+            <div class="form-group">
+                <label for="txtMail">信箱：</label><input type="email" name="txtMail" id="txtMail" required>
+            </div>
+            <div class="form-group">
+                <label for="txtTel">電話：</label><input type="tel" name="txtTel" id="txtTel" placeholder="09xxxxxxxx" pattern="09[0-9]{8}">
+            </div>
+            <div class="form-group">
+                性別：
+                <input type="radio" name="radGender" id="male" value="1"> <label for="male">男</label>
+                <input type="radio" name="radGender" id="female" value="0"> <label for="female">女</label>
+            </div>
+            <div class="form-group">
+                <label>出發偏好時間：</label><br>
+                日期：<input type="date" name="txtDate">
+                時間：<input type="time" name="txtTime"><br>
+                本地日期與時間：<input type="datetime-local" name="txtDatetime">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>旅遊興趣</legend>
+            <p>想去的國家（可多選）：</p>
+            <label><input type="checkbox" name="chk" value="韓國"> 韓國</label>
+            <label><input type="checkbox" name="chk" value="日本"> 日本</label>
+            <label><input type="checkbox" name="chk" value="中國"> 中國</label>
+            <label><input type="checkbox" name="chk" value="泰國"> 泰國</label>
+            <label><input type="checkbox" name="chk" value="美國"> 美國</label>
+            
+            <p><label for="opinion">更多建議或特別需求：</label></p>
+            <textarea id="opinion" name="opinion" rows="4" cols="40" placeholder="請填寫意見..."></textarea>
+        </fieldset>
+
+        <div class="btn-group">
+          <input type="submit" value="立即註冊">
+          <input type="reset" value="重新填寫">
+        </div>
+        <div style="position:fixed; right:10px; top:100px; z-index: 999;">
+        <a href="https://www.bella.tw/articles/travel&foodies/55574/2026-top10-overseas-travel-vacation" target="_blank">
+            <img src="https://s1.aigei.com/src/img/gif/e5/e56a634216f944f2bade2ad836511ef8.gif?imageMogr2/auto-orient/thumbnail/!282x252r/gravity/Center/crop/282x252/quality/85/%7CimageView2/2/w/282&e=2051020800&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:u51W5kSwew3Yw_qef1depwH6jCk=" alt="精選廣告" style="width: 200px; height: auto; border-radius: 8px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2);">
+        </a>
+    </div>
+    </form>
+</body>
+</html>

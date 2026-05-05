@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>見識更廣的世界 | 吃喝玩樂營</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 修正 Hero 背景圖為你提供的指定網址 */
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://www.galilee.com.tw/Page/Skittles_Pic/hash_adad2b7de3681cfaf818afca465b0cf9_1920_10000.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 150px 0; /* 增加上下間距讓大圖更有氣勢 */
+            text-align: center;
+        }
+        .features { display: flex; flex-wrap: wrap; gap: 20px; padding: 50px 0; }
+        .feature-box { flex: 1; min-width: 250px; text-align: center; padding: 20px; border: 1px solid #eee; border-radius: 10px; }
+        .feature-box h3 { color: #ff9800; }
+        .highlight-images { display: flex; gap: 15px; margin-top: 30px; }
+        .highlight-images img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; }
+        .btn:hover{
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in;
+            transform-origin: center;
+            transform: scale(1.2)rotate(360deg);
+            /* transform: rotate(360deg); */
+        }
+        .feature-box{
+            background:#000;
+            animation-name: h1_ani_1;
+            animation-duration: 5s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+        @keyframes h1_ani_1{
+         0%{
+             background: #87e4dc;
+         }
+         50%{
+             background:#a5dfff
+         }
+         100%{
+            background:#9afffa
+
+         }
+        }
+    </style>
+</head>
+<body>
+    <!-- <nav>
+        <div class="container">
+            <a href="index.html" class="logo">吃喝玩樂營</a>
+            <ul>
+                <li><a href="index.html" class="active">首頁</a></li>
+                <li><a href="about.html">美食美景</a></li>
+                <li><a href="courses.html">旅程簡介</a></li>
+                <li><a href="tools.html">導遊介紹</a></li>
+                <li><a href="testimonials.html">旅遊見證</a></li>
+            </ul>
+        </div>
+    </nav> -->
+
+
+    <!-- 練習區 JS-->
+
+    <script src ="nav_bar.js" ></script>
+    <div id="nav_bar"></div>
+
+
+    <!-- 頁首主視覺區 -->
+    <header class="hero">
+        <div class="container">
+            <h1>見識更廣的世界</h1>
+            <p>全世界的地圖在等你拓展，開啟一場說走就走的冒險</p><br>
+            <a href="courses.html" class="btn">立即查看熱門旅程</a>
+        </div>
+    </header>
+
+    <section class="container">
+        <!-- 三大特色介紹 -->
+        <div class="features">
+            <div class="feature-box">
+                <h3>✈️ 精選航線</h3>
+                <p>嚴選日本、韓國、中國熱門景點，帶你深入當地文化。</p>
+            </div>
+            <div class="feature-box">
+                <h3>🍱 在地美食</h3>
+                <p>不吃觀光客餐廳！帶你深入巷弄品嚐最道地的星級美味。</p>
+            </div>
+            <div class="feature-box">
+                <h3>👨‍🏫 專業導遊</h3>
+                <p>經驗豐富的中文導遊，讓你的旅程安全、充實又有趣。</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- 精選美景展示區（已新增圖片與小語） -->
+                   <div class="highlight-images">
+                <div>
+                    <img src="https://rimage.gnst.jp/livejapan.com/public/article/detail/a/20/00/a2000502/img/basic/a2000502_main.jpg" alt="日本風景">
+                    <p style="margin-top: 10px; font-weight: bold;">日本．京都楓紅</p>
+                </div>
+                <div>
+                    <img src="https://blog-static.kkday.com/zh-tw/blog/wp-content/uploads/900_shutterstock_344741702.jpg" alt="韓國風景">
+                    <p style="margin-top: 10px; font-weight: bold;">韓國．首爾冬景</p>
+                </div>
+                <div>
+                   <!-- 已替換為你提供的最新四川圖片網址 -->
+                    <img src="https://p0.itc.cn/q_70/images01/20231017/ccfd067839c04d81a18f521f865d993b.jpeg" alt="四川風景">
+                    <p style="margin-top: 10px; font-weight: bold;">中國．四川畢棚溝</p>
+                </div>
+            </div>
+
+
+            
+            <!-- 新增：旅遊心情小語 -->
+            <div style="margin-top: 30px; background-color: #fff9f0; padding: 20px; border-radius: 10px; text-align: center;">
+                <p style="color: #666; line-height: 1.8;">
+                    「旅行，是為了遇見那個更寬廣的自己。」<br>
+                    不管是漫步在東京的現代街頭、品味首爾的在地美食，還是震撼於四川的自然造物，每一段旅程都是生命中不可取代的養分。
+                </p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 50px;">
+            <p>準備好寫下你的旅遊故事了嗎？</p>
+            <a href="testimonials.html" style="color: #ff9800; font-weight: bold;">查看學員心得 →</a>
+        </div>
+    </section>
+
+    <!-- 右側漂浮廣告 -->
+    <div style="position:fixed; right:10px; top:100px; z-index: 999;">
+        <a href="https://travel4u.com.tw" target="_blank">
+            <img src="https://image1.gamme.com.tw/news2/2014/48/05/p6CVpaaVmKSZ.jpg" alt="精選廣告" style="width: 200px; height: auto; border-radius: 8px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2);">
+        </a>
+    </div>
+
+    <!-- 頁尾 -->
+    <footer style="background: #333; color: white; text-align: center; padding: 20px 0; margin-top: 50px;">
+        <p>&copy; 2024 吃喝玩樂營 - 帶你走遍全世界</p>
+    </footer>
+</body>
+</html>
